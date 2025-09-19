@@ -1,4 +1,3 @@
-﻿# Student_Management_Odoo
 # Student_Management_Odoo
 # স্টুডেন্ট ম্যানেজমেন্ট মডিউল
 
@@ -20,6 +19,7 @@
 - ✅ সহজ নেভিগেশন: *Students* এবং *Courses* মেনু থেকে।  
 
 ---
+
 
 
 
