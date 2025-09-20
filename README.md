@@ -1,48 +1,57 @@
 # Student Management Module
 
-## Overview
-**Student Management** হলো একটি কাস্টম Odoo অ্যাপ্লিকেশন যা ছাত্রছাত্রী এবং কোর্স ম্যানেজ করার জন্য তৈরি করা হয়েছে।  
-এটি ব্যবহার করে আপনি পারবেন:
-- ছাত্রছাত্রীদের তথ্য সংরক্ষণ ও ম্যানেজ করতে (নাম, ইমেইল, রোল নাম্বার, ডিপার্টমেন্ট)।  
-- কোর্স ডিফাইন করতে (কোর্স কোড, নাম, ক্রেডিট)।  
-- একজন ছাত্রছাত্রীকে একাধিক কোর্সে ভর্তি করাতে (many-to-many সম্পর্ক)।  
-- কোন ছাত্র কোন কোর্সে ভর্তি আছে, এবং কোন কোর্সে কতজন ছাত্র ভর্তি হয়েছে তা দেখতে।  
+Student Management is a custom Odoo application designed to manage students and courses.
+With this module, you can:
 
----
+Store and manage student information (name, email, roll number, department).
 
-## Features
-- ✅ ইউনিক রোল নাম্বার সহ **স্টুডেন্ট রেকর্ড**  
-- ✅ ইউনিক কোর্স কোড সহ **কোর্স রেকর্ড**  
-- ✅ স্টুডেন্ট ↔ কোর্স many-to-many সম্পর্ক  
-- ✅ ট্রি, ফর্ম এবং সার্চ ভিউ উভয় টেবিলের জন্য  
-- ✅ সহজ নেভিগেশন: *Students* এবং *Courses* মেনু থেকে  
-- ✅ রিপোর্ট: *কোন কোর্সে কতজন স্টুডেন্ট ভর্তি আছে তা দেখা যায়*  
+Define courses (course code, name, credits).
 
----
+Enroll a student in multiple courses (many-to-many relationship).
 
-## Steps to Install & Test
-1. আপনার Odoo `addons` ফোল্ডারের ভিতরে `student_management` ফোল্ডারটি কপি করুন।  
-2. `odoo.conf` ফাইলে `addons_path` এর মধ্যে `student_management` ফোল্ডারটি যুক্ত করুন।  
-3. সার্ভার রিস্টার্ট করুন:  
-   ```bash
-   python odoo-bin -c odoo.conf
-4. Odoo-তে লগইন করে Apps মেনুতে যান।
+View which students are enrolled in which courses, and how many students are enrolled per course.
 
-5. Student Management সার্চ করে Install করুন।
+Features
 
-6. এখন Student Management → Students / Courses মেনু থেকে ব্যবহার শুরু করতে পারবেন।
----
+✅ Student records with unique roll numbers
+
+✅ Course records with unique course codes
+
+✅ Many-to-many relationship between Students ↔ Courses
+
+✅ Tree, Form, and Search views for both models
+
+✅ Easy navigation through Students and Courses menus
+
+✅ Report: View how many students are enrolled in each course
+
+Steps to Install & Test
+
+Copy the student_management folder into your Odoo addons directory.
+
+Add the student_management folder path to the addons_path in your odoo.conf.
+
+Restart the Odoo server:
+
+python odoo-bin -c odoo.conf
+
+
+Log in to Odoo and go to the Apps menu.
+
+Search for Student Management and install it.
+
+Start using the module via Student Management → Students / Courses menus.
+
 Challenges & Solutions
 
-❌ Issue: Python version mismatch (Odoo 19 এ Python 3.11 কাজ করছিল না)।
-✔ Solution: Lower version (Python 3.10) ব্যবহার করার পর সমস্যার সমাধান হয়েছে।
+❌ Issue: Python version mismatch (Odoo 19 did not work with Python 3.11).
+✔ Solution: Switching to Python 3.10 solved the problem.
 
-❌ Issue: কিছু dependency install হচ্ছিল না (যেমন libsass)।
-✔ Solution: Microsoft C++ Build Tools install করে সমস্যা সমাধান করা হয়েছে।
+❌ Issue: Some dependencies (e.g., libsass) were not installing.
+✔ Solution: Installing Microsoft C++ Build Tools resolved the issue.
 
-❌ Issue: Report view প্রথমে দেখা যাচ্ছিল না।
-✔ Solution: আলাদা report ফোল্ডার তৈরি করে XML ফাইলে সঠিকভাবে report ট্যাগ ব্যবহার করেছি।
-
+❌ Issue: Report view was not showing initially.
+✔ Solution: Created a separate report folder and properly used the <report> tag in the XML file.
 
 ✍ Author: Jahid
 📌 Version: 1.0.0
