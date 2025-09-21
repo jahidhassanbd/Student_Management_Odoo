@@ -50,9 +50,8 @@ Challenges & Solutions
 ❌ Issue: Some dependencies (e.g., libsass) were not installing.
 ✔ Solution: Installing Microsoft C++ Build Tools resolved the issue.
 
-❌ Issue: Report view was not showing initially.
-✔ Solution: Created a separate report folder and properly used the <report> tag in the XML file.
 
 ✍ Author: Jahid
 📌 Version: 1.0.0
 🛠 Odoo Compatibility: Odoo 19
+
